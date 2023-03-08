@@ -1,6 +1,6 @@
-# think-dedetpl
+# ThinkPHP织梦模板引擎
 
-ThinkPHP织梦模板引擎
+织梦模板引擎 For ThinkPHP
 
 主要功能：
 
