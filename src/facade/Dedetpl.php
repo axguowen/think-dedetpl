@@ -9,13 +9,13 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen\facade;
+namespace think\facade;
 
 use think\Facade;
 
 /**
- * @see \axguowen\Dedetpl
- * @mixin \axguowen\Dedetpl
+ * @see \think\Dedetpl
+ * @mixin \think\Dedetpl
  */
 class Dedetpl extends Facade
 {
@@ -28,6 +28,6 @@ class Dedetpl extends Facade
      */
     protected static function getFacadeClass()
     {
-        return \axguowen\Dedetpl::class;
+        return \think\Dedetpl::class;
     }
 }

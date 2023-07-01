@@ -23,7 +23,7 @@ composer require axguowen/think-dedetpl
 ~~~php
 
 // 实例化引擎
-$dedeTemplate = new \axguowen\Dedetpl();
+$dedeTemplate = new \think\Dedetpl();
 // 模板路径
 $templatePath = $this->app->getRootPath() . '/public/views/default.htm';
 // 生成静态

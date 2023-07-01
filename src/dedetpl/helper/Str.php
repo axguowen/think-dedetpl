@@ -9,7 +9,7 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen\dedetpl\helper;
+namespace think\dedetpl\helper;
 
 class Str
 {

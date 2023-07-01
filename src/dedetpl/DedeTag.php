@@ -9,9 +9,7 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen\dedetpl;
-
-use utils\Str;
+namespace think\dedetpl;
 
 class DedeTag
 {
@@ -322,7 +320,7 @@ class DedeTag
         // 如果指定类型
         if (isset($type) && $value !== $default) {
             // 强制类型转换
-            $value = Str::typeCast($value, $type);
+            $value = \think\dedetpl\helper\Str::typeCast($value, $type);
         }
         // 返回
         return $value;

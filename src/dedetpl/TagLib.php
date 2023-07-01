@@ -9,7 +9,7 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen\dedetpl;
+namespace think\dedetpl;
 
 abstract class TagLib
 {
@@ -36,7 +36,7 @@ abstract class TagLib
     /**
      * 架构函数
      * @access public
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象
+     * @param \think\dedetpl\DedeTag $tag 标签对象
      * @param array $data 标签变量
      */
     public function __construct($tag = null, $data = [])
@@ -182,7 +182,7 @@ abstract class TagLib
         // 如果指定类型
         if (isset($type) && $value !== $default) {
             // 强制类型转换
-            $value = \axguowen\dedetpl\helper\Str::typeCast($value, $type);
+            $value = \think\dedetpl\helper\Str::typeCast($value, $type);
         }
         // 返回替换后的结果
         return $value;

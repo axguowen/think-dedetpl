@@ -9,7 +9,7 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen\dedetpl\driver;
+namespace think\dedetpl\driver;
 
 class File
 {

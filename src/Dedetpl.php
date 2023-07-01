@@ -9,7 +9,7 @@
 // | Author: axguowen <axguowen@qq.com>
 // +----------------------------------------------------------------------
 
-namespace axguowen;
+namespace think;
 
 use think\facade\Config;
 
@@ -96,7 +96,7 @@ class Dedetpl
         // 合并实例化时传入的配置参数
         $this->config = array_merge($this->config, $config);
         // 初始化模板编译存储器
-        $this->storage = new \axguowen\dedetpl\driver\File();
+        $this->storage = new \think\dedetpl\driver\File();
     }
 
     /**
@@ -567,7 +567,7 @@ class Dedetpl
                     // 如果次数大于1则说明存在标签嵌套
                     if($tagCounts > 1){
                         // 获取实际结束标签位置
-                        $endPos = \axguowen\dedetpl\helper\Str::strposNth($this->source, $fullTagEndWordThis, $i, $tagCounts);
+                        $endPos = \think\dedetpl\helper\Str::strposNth($this->source, $fullTagEndWordThis, $i, $tagCounts);
                         // 未找到结束标记
                         if($endPos === false){
                             echo '模板标签 [' . $tplTagName . '] 定义错误，未找到结束标签！标签位置： ' . $beginPos . ',<br />' . "\r\n";
@@ -614,7 +614,7 @@ class Dedetpl
                 // 构造当前标签ID
                 $tagid = count($this->tags) + 1;
                 // 实例化标签对象并写入到标签数组
-                $dedeTag = new \axguowen\dedetpl\DedeTag($tagid, $this->config);
+                $dedeTag = new \think\dedetpl\DedeTag($tagid, $this->config);
                 $dedeTag->setSource($attrStr)
                         ->setInnerText($innerText)
                         ->setBeginPos($beginPos)
@@ -685,8 +685,8 @@ class Dedetpl
     /**
      * 解析一个全局标签
      * @access protected
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象实例
-     * @return \axguowen\dedetpl\DedeTag
+     * @param \think\dedetpl\DedeTag $tag 标签对象实例
+     * @return \think\dedetpl\DedeTag
      */
     protected function parseGlobal($tag)
     {
@@ -722,8 +722,8 @@ class Dedetpl
     /**
      * 解析一个遍历标签
      * @access protected
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象实例
-     * @return \axguowen\dedetpl\DedeTag
+     * @param \think\dedetpl\DedeTag $tag 标签对象实例
+     * @return \think\dedetpl\DedeTag
      */
     protected function parseForeach($tag)
     {
@@ -799,8 +799,8 @@ class Dedetpl
     /**
      * 解析一个循环标签
      * @access protected
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象实例
-     * @return \axguowen\dedetpl\DedeTag
+     * @param \think\dedetpl\DedeTag $tag 标签对象实例
+     * @return \think\dedetpl\DedeTag
      */
     protected function parseVolist($tag)
     {
@@ -903,8 +903,8 @@ class Dedetpl
     /**
      * 解析一个PHP标签
      * @access protected
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象实例
-     * @return \axguowen\dedetpl\DedeTag
+     * @param \think\dedetpl\DedeTag $tag 标签对象实例
+     * @return \think\dedetpl\DedeTag
      */
     protected function parsePhp($tag)
     {
@@ -929,8 +929,8 @@ class Dedetpl
     /**
      * 解析一个文件引入标签
      * @access protected
-     * @param \axguowen\dedetpl\DedeTag $tag 标签对象实例
-     * @return \axguowen\dedetpl\DedeTag
+     * @param \think\dedetpl\DedeTag $tag 标签对象实例
+     * @return \think\dedetpl\DedeTag
      */
     protected function parseInclude($tag)
     {
