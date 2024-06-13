@@ -20,7 +20,7 @@
     "extra": {
         "think": {
             "config": {
-                "dedetpl": "src/config.php"
+                "dedetpl": "src/dedetpl/config.php"
             }
         }
     }
